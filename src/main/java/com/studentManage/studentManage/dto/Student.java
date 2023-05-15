@@ -1,12 +1,14 @@
 package com.studentManage.studentManage.dto;
 
 import jakarta.persistence.Entity;
-
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Student {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int stud_Id;
 	private String stud_Name;
 	private String stud_Email;
